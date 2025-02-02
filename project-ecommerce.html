@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticaret Projesi | Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html" class="logo-text">K<span class="logo-dot">.</span></a>
+            </div>
+            
+            <div class="navbar-menu">
+                <a href="index.html#home" class="navbar-link">Ana Sayfa</a>
+                <a href="index.html#about" class="navbar-link">Hakkımda</a>
+                <a href="index.html#skills" class="navbar-link">Yetenekler</a>
+                <a href="index.html#portfolio" class="navbar-link active">Projeler</a>
+                <a href="index.html#contact" class="navbar-link">İletişim</a>
+            </div>
+
+            <div class="navbar-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-header" data-aos="fade-up">
+                <h1>Modern E-Ticaret Platformu</h1>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Tarih: Mart 2024</span>
+                    <span><i class="fas fa-tag"></i> Kategori: Web Development</span>
+                    <span><i class="fas fa-code"></i> Teknolojiler: React, Node.js, MongoDB</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-gallery" data-aos="fade-right">
+                    <div class="main-image">
+                        <img src="project1.jpg" alt="E-Ticaret Projesi">
+                    </div>
+                    <div class="thumbnail-grid">
+                        <img src="ecommerce-detail1.jpg" alt="Ürün Listesi">
+                        <img src="ecommerce-detail2.jpg" alt="Sepet Sayfası">
+                        <img src="ecommerce-detail3.jpg" alt="Ödeme Ekranı">
+                    </div>
+                </div>
+
+                <div class="project-info" data-aos="fade-left">
+                    <div class="info-section">
+                        <h2>Proje Hakkında</h2>
+                        <p>Modern ve kullanıcı dostu bir e-ticaret platformu geliştirdim. Bu platform, işletmelerin ürünlerini kolayca listeleyebilmelerini ve müşterilerin sorunsuz bir alışveriş deneyimi yaşamalarını sağlıyor. Responsive tasarımı sayesinde tüm cihazlarda mükemmel çalışıyor.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Teknik Detaylar</h2>
+                        <ul>
+                            <li>React ve Redux ile geliştirilmiş modern frontend</li>
+                            <li>Node.js ve Express ile güçlü backend altyapısı</li>
+                            <li>MongoDB veritabanı ile ölçeklenebilir veri yönetimi</li>
+                            <li>JWT tabanlı kullanıcı kimlik doğrulama sistemi</li>
+                            <li>Stripe ile güvenli ödeme entegrasyonu</li>
+                            <li>AWS S3 ile dosya depolama çözümü</li>
+                            <li>Redis ile önbellek yönetimi</li>
+                            <li>Docker ile containerization</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Çözüm ve Sonuçlar</h2>
+                        <p>Proje, müşterinin satışlarını %150 artırmasına yardımcı oldu. Mobil kullanıcı deneyimindeki iyileştirmeler sayesinde mobil dönüşüm oranı %40 arttı. Sayfa yükleme süreleri optimize edilerek bounce rate %25 azaltıldı. Platform şu anda günlük 10.000+ aktif kullanıcıya hizmet veriyor.</p>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://ecommerce-demo.com" class="btn primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Canlı Site
+                        </a>
+                        <a href="https://github.com/username/ecommerce" class="btn secondary" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portfolio. Tüm hakları saklıdır.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.navbar-menu').classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Thumbnail Click Handler
+        document.querySelectorAll('.thumbnail-grid img').forEach(img => {
+            img.addEventListener('click', function() {
+                const mainImage = document.querySelector('.main-image img');
+                const tempSrc = mainImage.src;
+                mainImage.src = this.src;
+                this.src = tempSrc;
+            });
+        });
+    </script>
+</body>
+</html> 

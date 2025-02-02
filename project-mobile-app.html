@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobil Uygulama | Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html" class="logo-text">K<span class="logo-dot">.</span></a>
+            </div>
+            
+            <div class="navbar-menu">
+                <a href="index.html#home" class="navbar-link">Ana Sayfa</a>
+                <a href="index.html#about" class="navbar-link">Hakkımda</a>
+                <a href="index.html#skills" class="navbar-link">Yetenekler</a>
+                <a href="index.html#portfolio" class="navbar-link active">Projeler</a>
+                <a href="index.html#contact" class="navbar-link">İletişim</a>
+            </div>
+
+            <div class="navbar-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-header" data-aos="fade-up">
+                <h1>Fitness Takip Uygulaması</h1>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Tarih: Şubat 2024</span>
+                    <span><i class="fas fa-tag"></i> Kategori: Mobil Uygulama</span>
+                    <span><i class="fas fa-code"></i> Teknolojiler: React Native, Firebase</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-gallery" data-aos="fade-right">
+                    <div class="main-image">
+                        <img src="project2.jpg" alt="Mobil Uygulama">
+                    </div>
+                    <div class="thumbnail-grid">
+                        <img src="mobile-detail1.jpg" alt="Ana Ekran">
+                        <img src="mobile-detail2.jpg" alt="Antrenman Takibi">
+                        <img src="mobile-detail3.jpg" alt="İstatistikler">
+                    </div>
+                </div>
+
+                <div class="project-info" data-aos="fade-left">
+                    <div class="info-section">
+                        <h2>Proje Hakkında</h2>
+                        <p>Kullanıcıların fitness hedeflerini takip edebilecekleri, antrenman programlarını oluşturabilecekleri ve beslenme alışkanlıklarını kaydedebilecekleri kapsamlı bir mobil uygulama geliştirdim. Uygulama, kullanıcı dostu arayüzü ve gelişmiş özellikleriyle öne çıkıyor.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Teknik Detaylar</h2>
+                        <ul>
+                            <li>React Native ile cross-platform geliştirme</li>
+                            <li>Firebase Realtime Database ile anlık veri senkronizasyonu</li>
+                            <li>Firebase Authentication ile güvenli giriş sistemi</li>
+                            <li>Push Notifications entegrasyonu</li>
+                            <li>Offline kullanım desteği</li>
+                            <li>HealthKit ve Google Fit entegrasyonu</li>
+                            <li>Redux ile state yönetimi</li>
+                            <li>Custom animations ve UI components</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Çözüm ve Sonuçlar</h2>
+                        <p>Uygulama ilk 3 ayda 50.000+ indirme sayısına ulaştı. Kullanıcı geri bildirimleri ile sürekli geliştiriliyor. App Store'da 4.8, Google Play'de 4.7 yıldız ortalama puana sahip. Aktif kullanıcı sayısı her ay %20 artış gösteriyor.</p>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://apps.apple.com/app/fitness-app" class="btn primary" target="_blank">
+                            <i class="fab fa-app-store"></i> App Store
+                        </a>
+                        <a href="https://play.google.com/store/apps/fitness-app" class="btn secondary" target="_blank">
+                            <i class="fab fa-google-play"></i> Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portfolio. Tüm hakları saklıdır.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.navbar-menu').classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Thumbnail Click Handler
+        document.querySelectorAll('.thumbnail-grid img').forEach(img => {
+            img.addEventListener('click', function() {
+                const mainImage = document.querySelector('.main-image img');
+                const tempSrc = mainImage.src;
+                mainImage.src = this.src;
+                this.src = tempSrc;
+            });
+        });
+    </script>
+</body>
+</html> 

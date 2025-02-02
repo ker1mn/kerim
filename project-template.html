@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Detay | Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html" class="logo-text">K<span class="logo-dot">.</span></a>
+            </div>
+            
+            <div class="navbar-menu">
+                <a href="index.html#home" class="navbar-link">Ana Sayfa</a>
+                <a href="index.html#about" class="navbar-link">Hakkımda</a>
+                <a href="index.html#skills" class="navbar-link">Yetenekler</a>
+                <a href="index.html#portfolio" class="navbar-link active">Projeler</a>
+                <a href="index.html#contact" class="navbar-link">İletişim</a>
+            </div>
+
+            <div class="navbar-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-header" data-aos="fade-up">
+                <h1>{{PROJE_ADI}}</h1>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Tarih: {{PROJE_TARIHI}}</span>
+                    <span><i class="fas fa-tag"></i> Kategori: {{PROJE_KATEGORISI}}</span>
+                    <span><i class="fas fa-code"></i> Teknolojiler: {{TEKNOLOJILER}}</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-gallery" data-aos="fade-right">
+                    <div class="main-image">
+                        <img src="{{PROJE_GORSELI}}" alt="{{PROJE_ADI}}">
+                    </div>
+                    <div class="thumbnail-grid">
+                        <img src="{{GORSEL_1}}" alt="Detay 1">
+                        <img src="{{GORSEL_2}}" alt="Detay 2">
+                        <img src="{{GORSEL_3}}" alt="Detay 3">
+                    </div>
+                </div>
+
+                <div class="project-info" data-aos="fade-left">
+                    <div class="info-section">
+                        <h2>Proje Hakkında</h2>
+                        <p>{{PROJE_ACIKLAMASI}}</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Teknik Detaylar</h2>
+                        <ul>
+                            {{TEKNIK_DETAYLAR}}
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Çözüm ve Sonuçlar</h2>
+                        <p>{{COZUM_VE_SONUCLAR}}</p>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="{{CANLI_SITE}}" class="btn primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Canlı Site
+                        </a>
+                        <a href="{{GITHUB_LINK}}" class="btn secondary" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portfolio. Tüm hakları saklıdır.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.navbar-menu').classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurumsal Website | Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html" class="logo-text">K<span class="logo-dot">.</span></a>
+            </div>
+            
+            <div class="navbar-menu">
+                <a href="index.html#home" class="navbar-link">Ana Sayfa</a>
+                <a href="index.html#about" class="navbar-link">Hakkımda</a>
+                <a href="index.html#skills" class="navbar-link">Yetenekler</a>
+                <a href="index.html#portfolio" class="navbar-link active">Projeler</a>
+                <a href="index.html#contact" class="navbar-link">İletişim</a>
+            </div>
+
+            <div class="navbar-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-header" data-aos="fade-up">
+                <h1>Modern Kurumsal Website</h1>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> Tarih: Ocak 2024</span>
+                    <span><i class="fas fa-tag"></i> Kategori: Web Design</span>
+                    <span><i class="fas fa-code"></i> Teknolojiler: WordPress, PHP, MySQL</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-gallery" data-aos="fade-right">
+                    <div class="main-image">
+                        <img src="project3.jpg" alt="Kurumsal Website">
+                    </div>
+                    <div class="thumbnail-grid">
+                        <img src="corporate-detail1.jpg" alt="Ana Sayfa">
+                        <img src="corporate-detail2.jpg" alt="Hizmetler">
+                        <img src="corporate-detail3.jpg" alt="İletişim">
+                    </div>
+                </div>
+
+                <div class="project-info" data-aos="fade-left">
+                    <div class="info-section">
+                        <h2>Proje Hakkında</h2>
+                        <p>Büyük bir inşaat firması için modern ve profesyonel bir kurumsal website tasarladım ve geliştirdim. Site, firmanın tüm projelerini, hizmetlerini ve kurumsal kimliğini en iyi şekilde yansıtacak şekilde tasarlandı.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Teknik Detaylar</h2>
+                        <ul>
+                            <li>WordPress ile özel tema geliştirme</li>
+                            <li>Advanced Custom Fields ile dinamik içerik yönetimi</li>
+                            <li>WooCommerce entegrasyonu</li>
+                            <li>SEO optimizasyonu</li>
+                            <li>Çoklu dil desteği</li>
+                            <li>Özel proje galerisi ve filtreleme sistemi</li>
+                            <li>İleri düzey güvenlik önlemleri</li>
+                            <li>Performans optimizasyonu</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h2>Çözüm ve Sonuçlar</h2>
+                        <p>Yeni website ile birlikte firmanın online görünürlüğü artırıldı. Organik trafik %80 arttı, sayfa yüklenme hızı %60 iyileştirildi. Mobil kullanıcı deneyimi geliştirilerek mobil ziyaretçi oranı %45'e yükseldi.</p>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://corporate-website.com" class="btn primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Canlı Site
+                        </a>
+                        <a href="https://github.com/username/corporate" class="btn secondary" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portfolio. Tüm hakları saklıdır.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.navbar-menu').classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Thumbnail Click Handler
+        document.querySelectorAll('.thumbnail-grid img').forEach(img => {
+            img.addEventListener('click', function() {
+                const mainImage = document.querySelector('.main-image img');
+                const tempSrc = mainImage.src;
+                mainImage.src = this.src;
+                this.src = tempSrc;
+            });
+        });
+    </script>
+</body>
+</html> 
